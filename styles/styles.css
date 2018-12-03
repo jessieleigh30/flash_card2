@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700");
+@import url("https://fonts.googleapis.com/css?family=Kalam:700");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #2f3542;
+  font-family: 'Noto Sans SC', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body .add-new-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2em;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #ff4757;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+          box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+}
+
+body .add-new-card:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #c73541;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+body .new-card-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+body .new-card-overlay .close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #57606f;
+  margin: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body .new-card-overlay .close-menu svg {
+  width: 25px;
+  fill: #fff;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .new-card-overlay .new-card-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  position: relative;
+}
+
+body .new-card-overlay .new-card-form .front-card {
+  width: 400px;
+  border-radius: 5px;
+  height: 250px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .new-card-overlay .new-card-form .front-card .front-label {
+  width: 100%;
+  height: 90%;
+  padding: 30px 30px;
+  font-size: 25px;
+  font-family: 'Kalam', cursive;
+  outline: none;
+  caret-color: #ff4757;
+  border: none;
+  background-color: white;
+}
+
+body .new-card-overlay .new-card-form .back-card {
+  border-radius: 5px;
+  width: 400px;
+  margin-top: 10px;
+  height: 250px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .new-card-overlay .new-card-form .back-card .back-label {
+  width: 100%;
+  border-radius: 5px;
+  padding: 30px 30px;
+  font-size: 25px;
+  font-family: 'Kalam', cursive;
+  outline: none;
+  caret-color: #ff4757;
+  border: none;
+  background-color: white;
+  resize: none;
+  height: 100%;
+  width: 100%;
+}
+
+body .new-card-overlay .new-card-form .submit-form {
+  margin-top: 10px;
+  background-color: #ff4757;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  -webkit-box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+          box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+}
+
+body .new-card-overlay .new-card-form .submit-form:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #c73541;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+/*# sourceMappingURL=styles.css.map */
