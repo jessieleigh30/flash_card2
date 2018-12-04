@@ -186,7 +186,29 @@ body {
         align-items: center;
         justify-content: center;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+
+        .left-arrow, .right-arrow {
+            padding: 10px 5px;
+            background-color: rgba(0,0,0,0.1);
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            margin: 1em;
+            cursor: pointer;
+            svg {
+                width: 35px;
+                height: 35px;
+                fill: black;
+            }
+            &:hover {
+                background-color: rgba(0,0,0,0.4);
+            }
+            &:hover > svg {
+                fill: white;
+            }
+        }
     }
 } // END BODY
 

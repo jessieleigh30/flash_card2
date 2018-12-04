@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardArray = [];
     let frontCardInput = document.querySelector('#front-card-input');
     let backCardInput = document.querySelector('#back-card-input');
+    let cardContainer = document.querySelector('.inner-card-container');
 
-    // Flip Card Over
-    // let card = document.querySelector('.card');
-    // card.addEventListener('click', function() {
-    //     card.classList.toggle('is-flipped');
-    // })
+    //FlIP CARD OVER
+    let card = document.querySelector('.card');
+    card.addEventListener('click', function() {
+        card.classList.toggle('is-flipped');
+    })
 
     // OPEN AND CLOSE OVERLAY
     let openOverlay = document.querySelector('.add-card-button');
@@ -29,9 +30,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // MAKE NEW CARD ON FORM SUBMIT
     let cardForm = document.querySelector('.add-card-form');
-    cardForm.addEventListener('submit', () => {
-
-
+    cardForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        var front = frontCardInput.value; 
+        var back = backCardInput.value;
+        var card = {
+            front: front,
+            back: back
+        }
+        cardArray.push(card);
+        frontCardInput.value = "";
+        backCardInput.value = "";
+        overlay.style.display = "none";
+        console.log(cardArray);
+        displayCards();
     });
+
+    // DISPLAY CARDS
+    const displayCards = () => {
+        let currentIndex = 0;
+        let leftArrow = document.querySelector('.left-arrow');
+        let rightArrow = document.querySelector('.right-arrow');
+        cardContainer.innerHTML = "";
+        var card = document.createElement('div');
+        card.classList.add('card');
+        //// ENDED HEREEEEEEEEEE NOOOOooo!!O!!!O!O!O!
+    };
 
 });
