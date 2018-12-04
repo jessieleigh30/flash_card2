@@ -9,28 +9,31 @@
     <title>Flash Cards Application</title>
 </head>
 <body>
-
-    <button class="add-new-card">Add a card</button>
-    <div class="new-card-overlay">
-            <div class="close-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg>
-            </div>
-        <form class="new-card-form">
-            <div class="front-card">
-                <textarea id="front-label" class="front-label" placeholder="Type your front label..."></textarea>
-            </div>
-            <div class="back-card">
-                <textarea id="back-label" class="back-label" placeholder="Type your back label..."></textarea>
-            </div>
-            <input type="submit" class="submit-form" value="Add card"/>
+    <button class="add-card-button">Add Card</button>
+    <button class="delete-cards">Delete Cards</button>
+    <div class="overlay">
+        <div class="close-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg>
+        </div>
+        <form class="add-card-form">
+            <textarea id="front-card-input" placeholder="Enter your question..." autofocus></textarea>
+            <textarea id="back-card-input" placeholder="Enter your answer..."></textarea>
+            <input type="submit" id="submit-new-card-form"/>
         </form>
     </div>
-    <div class="new-card-form">
-        
-    </div>
-    <div class="card-container">
 
-    </div>
+    <ul class="card-container">
+
+    </ul>
+        <!-- <div class = "card">
+                <div class="card-face card-face-front">
+                    <h1>Hello</h1>
+            </div>
+            <div class="card-face card-face-back">
+                <h1>From the back.</h1>
+            </div>
+        </div> -->
+
     <script src="js/script.js"></script>
 </body>
 </html>
